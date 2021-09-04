@@ -6,7 +6,7 @@
 <body>
 	<h1>Heading 1</h1>
 	<p>Buang yang lama.</p>
-	<h2>Heading 2</h2>
-	<p>Tambah baru</p>
+	<h2>Heading Tukar</h2>
+	<p>Tambah baru pun tukar</p>
 </body>
 </html>
