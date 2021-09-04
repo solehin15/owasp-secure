@@ -5,6 +5,8 @@
 </head>
 <body>
 	<h1>Heading 1</h1>
-	<p>This is paragraph.</p>
+	<p>Buang yang lama.</p>
+	<h2>Heading 2</h2>
+	<p>Tambah baru</p>
 </body>
 </html>
