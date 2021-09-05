@@ -2,19 +2,18 @@
 	include '_header.php';
 ?>
 
+
 	<main>
 		<div class="container">
+			<div class="center">
+				<div class="card">
 
-			<h1>Heading 1</h1>
-			<p>Buang yang lama.</p>
-			<h2>Heading Tukar</h2>
-			<p>Tambah baru pun tukar</p>
+						<h2>Profile</h2>
 
+				</div>
+			</div>
 		</div>
 	</main>
-
-
-
 
 
 <?php

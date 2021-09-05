@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2021 at 11:58 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Generation Time: Sep 05, 2021 at 04:07 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,9 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `userId` int(255) NOT NULL,
   `userName` varchar(255) NOT NULL,
+  `userPhone` varchar(255) NOT NULL,
   `userEmail` varchar(255) NOT NULL,
   `userHash` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userId`, `userName`, `userPhone`, `userEmail`, `userHash`) VALUES
+(1, 'solehin15', '0175121027', 'ohhmyphaleg@gmail.com', 'e99a18c428cb38d5f260853678922e03');
 
 --
 -- Indexes for dumped tables
@@ -52,7 +60,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
