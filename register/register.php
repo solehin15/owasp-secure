@@ -1,15 +1,12 @@
 <?php
-	include '_header.php';
-?>
 
-
-
-
+/* Print layout for Login */
+print('
 	<main>
 		<div class="container">
 			<div class="center">
 				<div class="card">
-					<form action="php/register.php" method="post">
+					<form action="aregister.php" method="post">
 						<h2>Register</h2>
 						<label>Username:</label><br>
 						<input type="text" name="username" placeholder="username" required><br>
@@ -27,10 +24,4 @@
 			</div>
 		</div>
 	</main>
-
-
-
-
-<?php
-	include '_footer.php';
-?>
+');
