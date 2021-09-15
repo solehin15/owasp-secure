@@ -1,5 +1,9 @@
 <?php
 
-/* Redirect to `home` directory */
-header('location: home');
-exit();
+/*
+    Index file will be only calling
+    interface file to prevent
+    website defacement attack
+*/
+
+include 'home.php';

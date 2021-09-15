@@ -1,0 +1,151 @@
+/* Set default margin to 0 */
+* {
+  margin: 0;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+nav {
+  background: #04aa6d;
+  padding: 10px;
+  color: #fff;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.welcome-container {
+  margin: auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+.welcome {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.center {
+  border: solid 1px #ccc;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.card {
+  padding: 20px;
+}
+.card h2 {
+  margin: 5px 0 5px 0;
+}
+.card .error-message {
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+  border: solid 1px #d8000c;
+  color: #d8000c;
+  background-color: #ffd2d2;
+}
+.card .success-message {
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+  border: solid 1px #4f8a10;
+  color: #4f8a10;
+  background-color: #dff2bf;
+}
+
+.card label {
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  font-size: 12px;
+}
+.card input {
+  margin: 5px 0 5px 0;
+  padding: 10px 15px 10px 15px;
+  width: 270px;
+  border: none;
+  background: #eee;
+  border-radius: 50px 50px 50px 50px;
+}
+.card button {
+  margin: 5px 0 5px 0;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  width: 300px;
+  background: #04aa6d;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50px 50px 50px 50px;
+}
+.card button:hover {
+  background: #333;
+  color: #fff;
+}
+.card p {
+  text-align: center;
+}
+.table-profile td {
+  padding: 5px;
+}
+.table-profile a {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  background: #333;
+  color: #fff;
+}
+.footer-bottom {
+  padding: 5px;
+}
+footer a {
+  color: #04aa6d;
+  text-decoration: none;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
