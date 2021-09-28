@@ -45,6 +45,31 @@ nav {
   margin-left: 50px;
 }
 
+.search-container {
+  float: right;
+}
+.search-container input {
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  width: 50px;
+  transition: 0.4s;
+}
+.search-container input:hover {
+  width: 200px;
+}
+.search-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  background: #ccc;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: #333;
+  color: #fff;
+}
+
 .welcome-container {
   margin: auto;
   max-width: 1000px;
@@ -123,6 +148,30 @@ nav {
 }
 .table-profile a {
   text-decoration: none;
+}
+
+.product {
+  padding: 20px;
+}
+.table-product {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-product th {
+  padding: 10px;
+  background: #04aa6d;
+  color: #fff;
+}
+.table-product tr {
+  border: solid 0.5px #333;
+}
+.table-product td {
+  padding: 10px;
+  text-align: center;
+}
+.table-product img {
+  width: 100px;
 }
 
 footer {

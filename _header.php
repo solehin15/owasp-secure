@@ -34,6 +34,13 @@ if(isset($_SESSION['userId'])){
         </nav>
     ');
 }else{
+
+    if(isset($_GET['search'])){
+        $search=$_GET['search'];
+    }else{
+        $search='';
+    }
+
     /* Print default navigation with `login` and `register` if user not logged in */
     print('
         <nav>
@@ -46,7 +53,10 @@ if(isset($_SESSION['userId'])){
                     <a href="register.php">Register</a>
                     <a href="login.php">Login</a>
                 </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Kedai Komputer</span>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Kedai</span>            
+                <form class="search-container" action="action/search-action.php" method="post">
+                    <input type="text" name="search" placeholder="Search..." value="'.$search.'"/><button type="submit">Search</button>
+                </form>
             </div>
         </nav>
     ');
