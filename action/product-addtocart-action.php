@@ -19,12 +19,7 @@ $cartProductId=$_GET['productId'];
 $sql="SELECT * FROM products WHERE productId='$cartProductId'";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
-
-$cartProductName=$_GET['productPrice'];
-$cartProductPrice=$_GET['productName'];
 $cartStatus='cart';
-
-
 
 /* Check if product is currently in cart */
 $sql="SELECT * FROM carts WHERE cartUserId='$cartUserId' AND cartProductId='$cartProductId'";
@@ -38,13 +33,13 @@ if($count!=0){
     $result=mysqli_query($conn,$sql);
 }else{
     $cartProductQuantity=1;
-    $sql="INSERT INTO carts (cartUserId, cartProductId, cartProductName, cartProductPrice, cartProductQuantity, cartStatus) VALUES ('$cartUserId', '$cartProductId', '$cartProductName', '$cartProductPrice', '$cartProductQuantity', '$cartStatus')";
+    $sql="INSERT INTO carts (cartUserId, cartProductId, cartProductQuantity, cartStatus) VALUES ('$cartUserId', '$cartProductId', '$cartProductQuantity', '$cartStatus')";
     $result=mysqli_query($conn,$sql);
 }
 
 
 
 
-header('location: ../product.php');
+header('location: ../cart.php');
 
 

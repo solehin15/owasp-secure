@@ -15,6 +15,14 @@
 
 <?php
 
+
+
+if(isset($_GET['search'])){
+    $search=$_GET['search'];
+}else{
+    $search='';
+}
+
     /* Check if user is logged in */
 if(isset($_SESSION['userId'])){
     /* Print default navigation with `logout`  and `profile` if user logged in */
@@ -29,17 +37,14 @@ if(isset($_SESSION['userId'])){
                     <a href="profile.php">Profile</a>
                     <a href="logout.php">Logout</a>
                 </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Kedai Komputer</span>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Kedai Komputer</span>            
+                <form class="search-container" action="action/search-action.php" method="post">
+                    <input type="text" name="search" placeholder="Search..." value="'.$search.'"/><button type="submit">Search</button>
+                </form>
             </div>
         </nav>
     ');
 }else{
-
-    if(isset($_GET['search'])){
-        $search=$_GET['search'];
-    }else{
-        $search='';
-    }
 
     /* Print default navigation with `login` and `register` if user not logged in */
     print('
