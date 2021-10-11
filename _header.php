@@ -34,8 +34,9 @@ if(isset($_SESSION['userId'])){
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="home.php">Home</a>
                     <a href="product.php">Product</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="profile.php">Profile</a>
+                    <a href="cart.php">My Cart</a>
+                    <a href="purchase.php">My Purchase</a>
+                    <a href="profile.php">My Profile</a>
                     <a href="logout.php">Logout</a>
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Kedai Komputer</span>            
@@ -55,7 +56,6 @@ if(isset($_SESSION['userId'])){
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="home.php">Home</a>
                     <a href="product.php">Product</a>
-                    <a href="contact.php">Contact</a>
                     <a href="register.php">Register</a>
                     <a href="login.php">Login</a>
                 </div>

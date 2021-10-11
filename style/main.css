@@ -83,6 +83,10 @@ nav {
   border-radius: 50px;
 }
 
+main {
+  padding-bottom: 100px;
+}
+
 .center {
   border: solid 1px #ccc;
   background: #fff;
@@ -173,11 +177,23 @@ nav {
 .table-product img {
   width: 100px;
 }
+.product a {
+  margin: 4px;
+  text-decoration: none;
+  padding: 4px;
+  color: #fff;
+  background: #04aa6d;
+  display: inline-block;
+  border: solid 0.5px #333;
+}
+.product a:hover {
+  background: #111;
+}
 
 footer {
-  width: 100%;
   position: fixed;
   bottom: 0;
+  width: 100%;
   text-align: center;
   padding: 20px 0 20px 0;
   background: #333;

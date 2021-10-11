@@ -22,14 +22,14 @@ $row=mysqli_fetch_assoc($result);
 $cartStatus='cart';
 
 /* Check if product is currently in cart */
-$sql="SELECT * FROM carts WHERE cartUserId='$cartUserId' AND cartProductId='$cartProductId'";
+$sql="SELECT * FROM carts WHERE cartUserId='$cartUserId' AND cartProductId='$cartProductId' AND cartStatus='cart'";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
 $cartProductQuantity=$row['cartProductQuantity'];
 $count=mysqli_num_rows($result);
 if($count!=0){
     $cartProductQuantity=$cartProductQuantity+1;
-    $sql="UPDATE carts SET cartProductQuantity='$cartProductQuantity' WHERE cartUserId='$cartUserId' AND cartProductId='$cartProductId'";
+    $sql="UPDATE carts SET cartProductQuantity='$cartProductQuantity' WHERE cartUserId='$cartUserId' AND cartProductId='$cartProductId' AND cartStatus='cart'";
     $result=mysqli_query($conn,$sql);
 }else{
     $cartProductQuantity=1;

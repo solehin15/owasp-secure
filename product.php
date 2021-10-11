@@ -84,7 +84,7 @@
                 <td>'.$productDescription.'</td>
                 <td>'.$productQuantity.'</td>
                 <td>RM '.$productPrice.'</td>');
-                if(isset($_SESSION['userId'])){print('<td><a href="action/product-addtocart-action.php?productId='.$productId.'">Add to Cart</a></td>');}
+                if(isset($_SESSION['userId'])){print('<td><a href="action/product-addtocart-action.php?productId='.$productId.'">Buy</a></td>');}
                 print('
             </tr>
         ');
