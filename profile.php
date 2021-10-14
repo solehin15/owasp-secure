@@ -2,10 +2,10 @@
     /* Including header */
     include '_header.php';
 
-    /* If user is not logged in, can't go to profile page */
-    if(!isset($_SESSION['userId'])){
-        $_SESSION['error-message']='You have to login first.';
-        header('location: login.php');
+    /* If user is not logged in, can't go to profile page (Broken Autentication) */
+    if(!isset($_SESSION['userId'])){            
+        $_SESSION['error-message']='You have to login first.';      // Error message before redirect
+        header('location: login.php');                              // Redirect to login
         exit();
     }
 

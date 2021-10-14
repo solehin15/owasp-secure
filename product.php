@@ -51,15 +51,19 @@
     $count=1;
 
     if(isset($_GET['search'])){
-        $sql="SELECT * FROM products WHERE productCategories LIKE '%$search%' OR productName LIKE '%$search%' ORDER BY productName ASC";
+        $search=htmlentities($_GET['search'], ENT_QUOTES, 'UTF-8');
+        $search=mysqli_real_escape_string($conn,'%'.$search.'%');
+        $sql="SELECT * FROM products WHERE productCategories LIKE ? OR productName LIKE ? ORDER BY productName ASC";
+        $stmt=mysqli_stmt_init($conn);
+        mysqli_stmt_prepare($stmt,$sql);
+        mysqli_stmt_bind_param($stmt, "ss", $search, $search);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
     }else{
         $sql="SELECT * FROM products ORDER BY productName ASC";
+        $result=mysqli_query($conn,$sql);
     }
 
-    
-
-
-    $result=mysqli_query($conn,$sql);
     while($row=mysqli_fetch_assoc($result)){
 
         /* Id */

@@ -19,7 +19,8 @@
 
 
 if(isset($_GET['search'])){
-    $search=$_GET['search'];
+    $search=htmlentities($_GET['search'], ENT_QUOTES, 'UTF-8');
+    $search=mysqli_real_escape_string($conn,$search);
 }else{
     $search='';
 }

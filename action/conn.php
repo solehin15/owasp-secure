@@ -4,7 +4,7 @@
 */
 
 /* Connect Database */
-$conn=mysqli_connect('localhost', 'root', '', 'owasp-secure');
+$conn=mysqli_connect('localhost', 'root', '', 'owasp-secure') or die('Unable to connec to database.');
 
 /* Start Session */
 session_start();

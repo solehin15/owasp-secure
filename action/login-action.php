@@ -9,13 +9,23 @@ use PHPMailer\PHPMailer\Exception;
 include 'conn.php';
 
 /* Define variable from input */
-$userEmail=$_POST['email'];
-$userPass=$_POST['password'];
+$userEmail=mysqli_real_escape_string($conn, $_POST['email']);
+$userPass=mysqli_real_escape_string($conn, $_POST['password']);
 $userPass=sha1($userPass);
 
 /* Select user that match the case */
-$sql="SELECT * FROM users WHERE userEmail='$userEmail' AND userPass='$userPass'";
-$result=mysqli_query($conn,$sql);
+$sql="SELECT * FROM users WHERE userEmail=? AND userPass=?";
+
+/* Create prepared statement */
+$stmt=mysqli_stmt_init($conn);
+/* Prepare statement */
+mysqli_stmt_prepare($stmt,$sql);
+/* Bind parameters to the placeholder  */
+mysqli_stmt_bind_param($stmt, "ss", $userEmail, $userPass);
+/* Run parametesr inside database */
+mysqli_stmt_execute($stmt);
+/* Query a result */
+$result = mysqli_stmt_get_result($stmt);
 
 /* Count number of rows */
 $count=mysqli_num_rows($result);
